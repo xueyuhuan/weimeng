@@ -1,54 +1,59 @@
 <template>
   <div class="home">
-    <transition name="fade">
-      <div class="fixed" v-if="show">
-        <div class="left"><img src="../assets/avatar@2x.png"/><h4>天上的一朵云</h4></div>
-        <div class="right">关注</div>
-      </div>
-    </transition>
-    <header>
-      <div class="avatar">
-        <img src="../assets/avatar@2x.png"/>
-        <div class="text">
-          <h4>天上的一朵云</h4>
-          <p>我们错过某些错过，却能够一如往常的巴拉巴拉</p>
+    <div class="mobile">
+      <transition name="fade">
+        <div class="fixed" v-if="show">
+          <div class="left"><img src="../assets/avatar@2x.png"/><h4>天上的一朵云</h4></div>
+          <div class="right">关注</div>
         </div>
-      </div>
-      <ul class="number">
-        <li><h4>416</h4><p>赞同</p></li>
-        <li><h4>66</h4><p>帖子</p></li>
-        <li><h4>777</h4><p>人气</p></li>
-      </ul>
-    </header>
-    <main>
-      <div class="row">
-        <img src="../assets/icon/icon_user@2x.png"/>
-        <div class="right">我的资料</div>
-      </div>
-      <div class="row">
-        <img src="../assets/icon/icon_follow@2x.png"/>
-        <div class="right">我的关注</div>
-      </div>
-      <div class="row">
-        <img src="../assets/icon/icon_message@2x.png"/>
-        <div class="right">我的通知<i>6</i></div>
-      </div>
-      <div class="row">
-        <img src="../assets/icon/icon_safety@2x.png"/>
-        <div class="right">隐私与安全<br/><span>對内容個性化並收集和分享你的部分數據</span></div>
-      </div>
-      <div class="row">
-        <img src="../assets/icon/icon_setting@2x.png"/>
-        <div class="right">账户设置</div>
-      </div>
-      <div class="other">
-        <h5>其他</h5>
+      </transition>
+      <header>
+        <div class="avatar">
+          <img src="../assets/avatar@2x.png"/>
+          <div class="text">
+            <h4>天上的一朵云</h4>
+            <p>我们错过某些错过，却能够一如往常的巴拉巴拉</p>
+          </div>
+        </div>
+        <ul class="number">
+          <li><h4>416</h4><p>赞同</p></li>
+          <li><h4>66</h4><p>帖子</p></li>
+          <li><h4>777</h4><p>人气</p></li>
+        </ul>
+      </header>
+      <main>
+        <div class="row">
+          <img src="../assets/icon/icon_user@2x.png"/>
+          <div class="right">我的资料</div>
+        </div>
+        <div class="row">
+          <img src="../assets/icon/icon_follow@2x.png"/>
+          <div class="right">我的关注</div>
+        </div>
+        <div class="row">
+          <img src="../assets/icon/icon_message@2x.png"/>
+          <div class="right">我的通知<i>6</i></div>
+        </div>
+        <div class="row">
+          <img src="../assets/icon/icon_safety@2x.png"/>
+          <div class="right">隐私与安全<br/><span>對内容個性化並收集和分享你的部分數據</span></div>
+        </div>
         <div class="row">
           <img src="../assets/icon/icon_setting@2x.png"/>
-          <div class="right">退出账户</div>
+          <div class="right">账户设置</div>
         </div>
-      </div>
-    </main>
+        <div class="other">
+          <h5>其他</h5>
+          <div class="row">
+            <img src="../assets/icon/icon_setting@2x.png"/>
+            <div class="right">退出账户</div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="pc">
+      <p>请使用手机模式打开: ）</p>
+    </div>
   </div>
 </template>
 
@@ -73,6 +78,8 @@ export default {
 <style lang="scss">
   @import "../assets/common";
   .home{
+    max-width: 400px;
+    margin: 0 auto;
     .fixed{
       @include flex(space-between);
       position: fixed;
