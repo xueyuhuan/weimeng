@@ -1,0 +1,56 @@
+/*
+*基础重置样式表*
+*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+}
+input,button,select,textarea{outline:none;}
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+em,i{
+    font-style: normal;
+}
+/*
+*混合*
+*/
+//flex布局 参数：横轴，纵轴
+@mixin flex($main:flex-start,$cross:center){
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    justify-content: $main;
+    align-items: $cross;
+}
+/*
+*延伸*
+*/
+//超出部分省略号
+%ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/*
+*通用*
+*/
+h4{
+    color: #fff;
+    line-height: 1;
+}
+p{
+    color: #555;
+    line-height: 1;
+    margin: 0;
+}
